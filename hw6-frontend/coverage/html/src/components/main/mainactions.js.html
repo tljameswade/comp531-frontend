@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/main/mainactions.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/components/main/</a> mainactions.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">38.6% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>22/57</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">18.18% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>4/22</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">24% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>6/25</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">35.29% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>18/51</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">1 branch</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { resource } from '../../actions'
+import { connect } from 'react-redux'
+import React, { Component, PropTypes } from 'react'
+&nbsp;
+&nbsp;
+// Actions associated with the main page
+export const getFollowers = <span class="fstat-no" title="function not covered" >(method, name) =&gt; {</span>
+    
+    return <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(dispatch, getState) =&gt; {</span></span>
+        if (<span class="cstat-no" title="statement not covered" >method == 'PUT' &amp;&amp; getState().FollowReducer.followers[name]) {</span>
+            return <span class="cstat-no" title="statement not covered" >dispatch({ type: 'Error_Follow', error: `You have already follow ${name}` })</span>
+        } 
+        resource(<span class="cstat-no" title="statement not covered" >method ? method : 'GET', 'following' + (name ? '/' + name : ''))</span>
+            .then(<span class="fstat-no" title="function not covered" >r =&gt; {</span>
+                if (<span class="cstat-no" title="statement not covered" >method == 'PUT' &amp;&amp; r.following.indexOf(name) &lt; 0){</span>
+                    return <span class="cstat-no" title="statement not covered" >dispatch({ type: 'Error_Follow', error: `${name} does not exist` })</span>
+                }
+&nbsp;
+                const <span class="cstat-no" title="statement not covered" >_followers = r.following.reduce(<span class="fstat-no" title="function not covered" >(o,v,i) =&gt; {</span>o[<span class="cstat-no" title="statement not covered" >v] = {name: v}; <span class="cstat-no" title="statement not covered" >r</span>eturn o}, {})</span></span>
+                const <span class="cstat-no" title="statement not covered" >followerList = r.following.join(',')</span>
+&nbsp;
+                const <span class="cstat-no" title="statement not covered" >updateHeadline = resource('GET', `headlines/${followerList}`)</span>
+                    .then(<span class="fstat-no" title="function not covered" >r =&gt; {</span>
+                        r.<span class="cstat-no" title="statement not covered" >headlines.forEach(<span class="fstat-no" title="function not covered" >(u)=&gt;{</span></span>
+                            const <span class="cstat-no" title="statement not covered" >user = _followers[u.username]</span>
+                            if (<span class="cstat-no" title="statement not covered" >user){</span>
+                                user.<span class="cstat-no" title="statement not covered" >headline = u.headline</span>
+                            }
+                        })
+                    })
+                
+                const <span class="cstat-no" title="statement not covered" >updateAvatar = resource('GET', `avatars/${followerList}`)</span>
+                    .then(<span class="fstat-no" title="function not covered" >r =&gt; {</span>
+                        r.<span class="cstat-no" title="statement not covered" >avatars.forEach(<span class="fstat-no" title="function not covered" >(u)=&gt;{</span></span>
+                            const <span class="cstat-no" title="statement not covered" >user = _followers[u.username]</span>
+                            if (<span class="cstat-no" title="statement not covered" >user){</span>
+                                user.<span class="cstat-no" title="statement not covered" >image = u.avatar</span>
+                            }
+                        })
+                    })
+&nbsp;
+                Promise.<span class="cstat-no" title="statement not covered" >all([updateHeadline, updateAvatar]).then(<span class="fstat-no" title="function not covered" >()=&gt;{</span></span>
+                    dispatch(<span class="cstat-no" title="statement not covered" >{type:'Update_Followers', followers: _followers})</span>
+                })    
+            }).catch(<span class="fstat-no" title="function not covered" >err =&gt; {</span>
+                dispatch(<span class="cstat-no" title="statement not covered" >{ type: 'Error_Follow', error: 'Error occurs in following!'})</span>
+            })
+    }
+} 
+&nbsp;
+export const unfollow = <span class="fstat-no" title="function not covered" >(name) =&gt; {</span>
+    return <span class="cstat-no" title="statement not covered" >getFollowers('DELETE', name)</span>
+}
+&nbsp;
+export const AddFollower = <span class="fstat-no" title="function not covered" >(name) =&gt; {</span>
+    return <span class="cstat-no" title="statement not covered" >getFollowers('PUT', name)</span>
+}
+&nbsp;
+&nbsp;
+export const addNewPost = (author, article) =&gt; {
+    const payload={
+        text: article
+    }
+    return (dispatch) =&gt; {
+        resource('POST', 'article', payload)
+            .then(r =&gt; {
+                dispatch({
+                    type: 'Add_New_Article',
+                    newArticle: article,
+                    author: author
+                })
+            })
+    }
+}
+&nbsp;
+&nbsp;
+export const navToProfile = () =&gt; {
+    return {
+        type: 'To_Profile'
+    }
+}
+&nbsp;
+export const ToLanding = () =&gt; {
+    return {
+        type: 'To_Landing'
+    }
+}
+export const navToLanding = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+    return <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(dispatch) =&gt; {</span></span>
+        resource(<span class="cstat-no" title="statement not covered" >'PUT', 'logout')</span>
+            .then(<span class="fstat-no" title="function not covered" >r =&gt; {</span>
+                dispatch(<span class="cstat-no" title="statement not covered" >{ type: 'To_Landing' })</span>
+            }).catch(<span class="fstat-no" title="function not covered" >err =&gt; {</span>
+                console.<span class="cstat-no" title="statement not covered" >log('!!!!' + err)</span>
+                dispatch(<span class="cstat-no" title="statement not covered" >{ type: 'To_Main' })</span>
+            })
+    }
+}
+&nbsp;
+export const updateHeadline = <span class="fstat-no" title="function not covered" >(name, headline) =&gt; {</span>
+    return <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(dispatch) =&gt; {</span></span>
+        const <span class="cstat-no" title="statement not covered" >payload = {</span>
+            headline: headline
+        }
+        if (<span class="cstat-no" title="statement not covered" >headline) {</span>
+            resource(<span class="cstat-no" title="statement not covered" >'PUT', 'headline', payload)</span>
+                .then(<span class="fstat-no" title="function not covered" >r =&gt; {</span>
+                    dispatch(<span class="cstat-no" title="statement not covered" >{</span>
+                        type: 'Update_Headline',
+                        username: name,
+                        headline: r.headline
+                    })
+                })
+        }
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Mar 25 2017 23:22:20 GMT-0500 (CDT)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
