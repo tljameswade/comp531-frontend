@@ -44,16 +44,27 @@ export const register = ({accountname, dispname, email, phone, birth, zipcode, p
         }
     }
     else {
-        return {
-            type: 'Correct_Register',
-            accountname,
-            dispname,
-            email,
-            phone,
-            birth,
-            zipcode,
-            password,
-            registerInfo: 'You have correctly registered!'
+        return (dispatch) => {
+            resource('POST', 'register', {
+                username: dispname,
+                email: email,
+                dob: birth,
+                zipcode: zipcode,
+                password: password
+            })
+            .then(r => {
+                dispatch({
+                    type: 'Correct_Register',
+                    accountname,
+                    dispname,
+                    email,
+                    phone,
+                    birth,
+                    zipcode,
+                    password,
+                    registerInfo: 'You have correctly registered!'
+                })
+            })
         }
     }
 }
