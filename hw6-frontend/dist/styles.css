@@ -1,0 +1,177 @@
+h1 {
+    text-align: center
+}
+
+#loginDiv {
+    float: left;
+    margin: auto 15px;
+    padding: 15px 15px 15px 110px;
+}
+
+#registerDiv {
+    float: right;
+    margin: auto 15px;
+    padding: 15px 15px 15px 90px;
+}
+
+#navMainButton {
+    padding: 5px;
+    margin: 5px;
+}
+
+#profileUpload {
+    padding: 10px;
+    margin: 5px;
+}
+
+#addImg {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+.landingAlert {
+    color: #ff5050
+}
+
+.mainpagehead {
+    text-align: center
+}
+
+.sidebar {
+    margin: 30px 0px 30px 0px;
+}
+
+#followingName {
+    font-size: 1.3em;
+}
+
+#followingDiv {
+    float: left;
+    margin-top: 50px;
+}
+
+#currentInfoDisp {
+    clear: left;
+    float: left;
+    margin: 15px 0px 15px 30px;
+}
+
+.inforow {
+    font-size: 1.3em;
+}
+
+#updateInfoDisp {
+    float: right;
+    margin: auto 15px;
+    padding: 0px 0px 0px 20px;
+}
+
+#profileHelperpic {
+    width: 450px;
+    height: 300px;
+}
+
+#profileHeadpic {
+    width: 475px;
+    height: 260px;
+    float: right;
+    margin: 20px 30px 0px 0px;
+}
+
+#profileHeaddiv {
+    float: right;
+}
+
+#navProfileImg {
+    padding: 10px 0px 10px 0px;
+    width: 350px;
+    height: 200px;
+}
+
+#greetingGuest {
+    font-size: 1.5em
+}
+
+.activestatus {
+    font-size: 1.1em;
+    font-style: italic;
+}
+
+.updateStatusInput {
+    margin: 6px 0px 6px 0px;
+}
+
+#cardImg {
+    text-align: center;
+    margin: 15px 0px 15px 0px;
+}
+
+#articleImgs {
+    width: 500px;
+    height: 350px;
+}
+
+#commentText {
+    width: 75%
+}
+
+#commentbar {
+    width: 75%
+}
+
+#showcommbar {
+    margin: 5px 0px 5px 0px
+}
+
+#commentImg {
+    width: 30px;
+    height: 30px
+}
+
+#followerImg {
+    width: 300px;
+    height: 220px;
+}
+
+#eachCard {
+    margin: 20px 0px 20px 0px;
+    background-color: #99ccff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#articleText {
+    margin: 5px 0px 5px 0px;
+}
+
+#articleAuthor {
+    font-size: 1.5em;
+}
+
+#profileimg {
+    width: 300px;
+    height: 200px;
+    padding: 10px 15px 10px 0px;
+}
+
+#followingInfo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#article {
+    float: right;
+}
+
+.postButtons {
+    float: right;
+}
+
+#headlinePart {
+    float: right;
+}
+
+.articleAvatar {
+    width: 30px;
+    height: 30px;
+}
