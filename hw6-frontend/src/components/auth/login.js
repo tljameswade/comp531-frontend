@@ -1,5 +1,6 @@
 import React from 'react'
 import { setLogin } from './authactions'
+import { facebooklogin } from './authactions'
 import { connect } from 'react-redux'
 
 //Variable to store the info input (user name and password)
@@ -23,6 +24,10 @@ const Login = ({setLogin, loginInfo}) => {
                     <div>
                         <input id="loginbutton" type="button" className="btn btn-primary btn-lg"
                         value="Log in" onClick={() => validate(setLogin, loginacc, loginpass)}/>
+                    </div>
+                    <div>
+                        <input type="button" className="btn btn-primary btn-lg" value="facebook login"
+                        onClick={ () => facebooklogin()} />
                     </div>
                 </form>
             </div>
@@ -51,7 +56,8 @@ export default connect(
     },
     (dispatch) => {
         return {
-            setLogin: (text, username, password) => dispatch(setLogin(text, username, password))
+            setLogin: (text, username, password) => dispatch(setLogin(text, username, password)),
+            facebooklogin: () => dispatch(facebooklogin())
         }
     }
 )(Login)

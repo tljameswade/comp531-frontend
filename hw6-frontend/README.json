@@ -1,5 +1,5 @@
-{
-  "netid": "sq6",
-  "frontend": "https://comp531jqfrontend.surge.sh",
-  "backend": "https://frozen-shore-14015.herokuapp.com"
+{ 
+    "netid": "sep1",
+    "frontend": "http://jamesqifrontendcomp531.surge.sh",
+    "backend": "https://hw7comp531app.herokuapp.com"
 }

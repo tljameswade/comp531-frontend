@@ -1,14 +1,14 @@
 
 //The reducer to update information based on user's input of user information
 const registerReducer = (state = {
-
 }
 , action) => {
     switch (action.type) {
         case 'Password_No_Match':
             return {
                 ...state,
-                registerInfo: action.registerInfo
+                registerInfo: action.registerInfo,
+                updateInfo: action.updateInfo
             }
         case 'Correct_Register':
             return {...state,
@@ -31,17 +31,19 @@ const registerReducer = (state = {
                 email: action.email,
                 zipcode: action.zipcode,
                 birth: action.birth,
-                avatar: action.avatar
+                avatar: action.avatar,
             }
         case 'Email_Update':
             return {
                 ...state,
-                email: action.email
+                email: action.email,
+                updateInfo: action.updateInfo
             }
         case 'Zipcode_Update':
             return {
                 ...state,
-                zipcode: action.zipcode
+                zipcode: action.zipcode,
+                updateInfo: action.updateInfo
             }
         case 'Update_Avatar':
             return {
@@ -51,7 +53,7 @@ const registerReducer = (state = {
         case 'Password_Update':
             return {
                 ...state,
-                registerInfo: action.registerInfo
+                updateInfo: action.updateInfo
             }
         case 'To_Landing':
             return {
@@ -63,7 +65,8 @@ const registerReducer = (state = {
                 birth: '',
                 zipcode: '',
                 registerInfo: '',
-                avatar: ''
+                avatar: '',
+                updateInfo: ''
             }
         default:
             return state

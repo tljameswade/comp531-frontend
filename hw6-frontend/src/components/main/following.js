@@ -24,8 +24,10 @@ const Following = ({followers, AddFollower, error}) => {
                 <span className="input-group-btn">
                     <input id="addfollowerbutton" type="button" className="btn btn-success"
                     value="Add Follower" onClick={() => {
-                        AddFollower(inputFollower.value)
-                        inputFollower.value=''}} />
+                        if (inputFollower && inputFollower.value != '') {
+                            AddFollower(inputFollower.value)
+                            inputFollower.value=''
+                        }}} />
                 </span>
             </div>
             <div>{error}</div>

@@ -5,26 +5,26 @@ import React, { Component, PropTypes } from 'react'
 //The update action to update according to the input update info
 export const update = ({email, phone, zipcode, password, passconf, location}) => {
     if (password !== passconf) {
-        return {type: 'Password_No_Match', registerInfo: 'Passwords must match!'}
+        return {type: 'Password_No_Match', updateInfo: 'Passwords must match!'}
     }
 
     return (dispatch) => {
         if (email) {
             resource('PUT', 'email', {email})
                 .then(r => {
-                    dispatch({ type: 'Email_Update', email: email})
+                    dispatch({ type: 'Email_Update', email: email, updateInfo: "Updated!" })
                 })
         }
         if (zipcode) {
             resource('PUT', 'zipcode', {zipcode})
                 .then(r => {
-                    dispatch({ type: 'Zipcode_Update', zipcode: zipcode})
+                    dispatch({ type: 'Zipcode_Update', zipcode: zipcode, updateInfo: "Updated!" })
                 })
         }
         if (password) {
             resource('PUT', 'password', {password})
                 .then(r => {
-                    dispatch({ type: 'Password_Update', registerInfo: 'Will not update'})
+                    dispatch({ type: 'Password_Update', updateInfo: "Updated!" })
                 })
         }
     }
@@ -66,8 +66,7 @@ export const getProfile = () => {
         const dob = resource('GET', 'dob')
             .then(r => {
                 const birthDate = new Date(r.dob)
-                const birthday = birthDate.getFullYear()+'-'+(birthDate.getMonth()+1)+'-'+birthDate.getDate()
-                response.birth = birthday
+                response.birth = birthDate.toDateString()
             })
 
         Promise.all([avatar, email, zipcode, dob]).then(() => {

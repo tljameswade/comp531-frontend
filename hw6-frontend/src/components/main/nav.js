@@ -26,8 +26,10 @@ const Navbar = ({avatar, navToLanding, navToProfile, ownname, ownheadline, updat
                 <input id="newstatus" type="text" className="form-control" placeholder="New Status"
                 ref={(node) => inputText = node}/>
                 <input id="submitheadline" type="submit" value="Update" className="btn btn-success" onClick={() => {
-                    updateHeadline(ownname, inputText.value)
-                    inputText.value=''}}/>
+                    if (inputText && inputText.value != '') {
+                        updateHeadline(ownname, inputText.value)
+                        inputText.value=''
+                    }}}/>
             </div>
         </div>
     )

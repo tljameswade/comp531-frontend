@@ -57,7 +57,7 @@ const UpdateInfo = ({email, phone, zipcode, password, passconf, updateInfo, disp
 export default connect(
     (state) => {
         return {
-            updateInfo: state.RegisterReducer.registerInfo
+            updateInfo: state.RegisterReducer.updateInfo
         }
     }, null
 )(UpdateInfo)

@@ -58,8 +58,8 @@ export const AddFollower = (name) => {
     return getFollowers('PUT', name)
 }
 
-// Thea action to add a new article
-export const addNewPost = (author, message, image) => {
+// The action to add a new article
+export const addNewPostWithImage = (author, message, image) => {
     const fd = new FormData()
     fd.append('text', message)
     fd.append('image', image)
@@ -72,7 +72,21 @@ export const addNewPost = (author, message, image) => {
                     newArticle: newArticle
                 })
             })
+    }    
+}
+
+// The action to add text only post
+export const addNewPost = (author, message, image) => {
+    return (dispatch) => {
+        resource('POST', 'article', { text: message })
+            .then(r => {
+                dispatch({
+                    type: 'Add_New_Article',
+                    newArticle: r.articles[0]
+                })
+            })
     }
+    
 }
 
 // The action to navigate to the profile page

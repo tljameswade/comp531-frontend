@@ -6,7 +6,7 @@ import Register from './register'
 const Landing = () => {
     return (
         <div className='row'>           
-            <h1>Welcome to my frontend draft!</h1>
+            <h1>Welcome to James Qi's frontend!</h1>
             <br />
             <br />
             <Login />

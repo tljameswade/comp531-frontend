@@ -34,9 +34,11 @@ const Headline = ({ addNewPost, author }) => {
                         inputArticle.value=''
                         inputImg = undefined} }/>
                     <input id="articlesubmit" className="btn btn-success" type="button" value="Post" onClick={ ()=>{
-                        addNewPost(author, inputArticle.value, inputImg)
-                        inputArticle.value=''
-                        inputImg = undefined}}/>
+                        if (inputArticle && inputArticle.value != '') {
+                            addNewPost(author, inputArticle.value, inputImg)
+                            inputArticle.value=''
+                            inputImg = undefined
+                        }}}/>
                 </div>
             </div>
         </div>

@@ -3,7 +3,8 @@ import fetch from 'isomorphic-fetch'
 
 // For connecting to the dummy server
 
-export const url = 'https://webdev-dummy.herokuapp.com'
+export const url = 'https://hw7comp531app.herokuapp.com'
+// export const url = 'http://localhost:3000'
 
 export const resource = (method, endpoint, payload, isJson=true) => {
     const options = {

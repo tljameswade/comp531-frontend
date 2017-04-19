@@ -17,6 +17,7 @@ export const initVisit = () => {
                     username: r.headlines[0].username,
                     headline: r.headlines[0].headline
                 })
+                dispatch(navToMain())
                 dispatch(getProfile())
                 dispatch(getArticles())
                 dispatch(getFollowers())
@@ -86,13 +87,15 @@ export const setLogin = (info, username, password) => {
                     dispatch({ type: 'Correct_Login', username })
                     dispatch(initVisit())
                     
-                }).then( r => {
-                    dispatch(navToMain())
                 }).catch(err => {
                     console.log(err)
                     dispatch(updateError("Wrong match of username and password!"))
                 })
         }
     }
+}
+
+export const facebooklogin = () => {       
+    window.location = 'http://localhost:3000/login/facebook'
 }
 
